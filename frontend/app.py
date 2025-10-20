@@ -7,6 +7,7 @@ from expenses import maintain_expenses
 from analytics import view_analytics
 
 # Load and apply CSS styles
+st.write(os.getcwd())
 css_file_path = os.path.join(os.getcwd(), "style.css")
 if os.path.exists(css_file_path):
     with open(css_file_path) as f:
