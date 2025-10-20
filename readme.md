@@ -2,7 +2,7 @@
 
 The **Expense Management App** is a web-based application designed to help users manage their daily expenses efficiently. It allows users to add, update, and analyze their expenses over a specified time period.
 
----
+
 
 ## Features
 
@@ -11,7 +11,7 @@ The **Expense Management App** is a web-based application designed to help users
 - **RESTful API**: Backend powered by FastAPI for managing and retrieving expense data.
 - **Interactive Frontend**: Built with Streamlit for a user-friendly interface.
 
----
+
 
 ## Tech Stack
 
@@ -23,7 +23,7 @@ The **Expense Management App** is a web-based application designed to help users
 ### Frontend:
 - **Streamlit**: For creating an interactive and responsive user interface.
 
----
+
 
 ## Installation
 
@@ -51,7 +51,7 @@ The **Expense Management App** is a web-based application designed to help users
     cd ../frontend
     streamlit run app.py
 
---- 
+
 
 ## API Endpoints
 
@@ -81,7 +81,7 @@ POST /expenses/{expense_date}
 
 - Description: Retrieve expense analytics for a specified date range.
 
---- 
+
 
 ## Project Structure
 ```bash
@@ -98,7 +98,7 @@ POST /expenses/{expense_date}
     ├── [requirements.txt](http://_vscodecontentref_/1)       # Python dependencies
     └── [readme.md](http://_vscodecontentref_/2)              # Project documentation
 ```
----
+
 
 ## Screenshots
 Add/Update Expenses
@@ -106,21 +106,21 @@ Add/Update Expenses
 View Analytics
 <img alt="View Analytics" src="https://via.placeholder.com/800x400?text=View+Analytics+Screenshot">
 
----
+
 
 ## Future Enhancements
  - Add user authentication for secure access.
 - Support for exporting analytics data to CSV/Excel.
 - Add recurring expense tracking.
 
----
+
 
 ## Acknowledgments
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Streamlit](https://streamlit.io/)
 - [Pandas](https://pandas.pydata.org/)
 
----
+
 
 ### Notes:
 - Replace `https://github.com/your-repo/expense-management-app.git` with your actual repository URL.
