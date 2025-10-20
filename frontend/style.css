@@ -1,0 +1,127 @@
+/* General body styling */
+body {
+    background-color: #1E1E2F; /* Dark slate background */
+    color: #E0E0E0; /* Light gray text */
+    font-family: Arial, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main app container */
+.stApp {
+    background-color: #1E1E2F; /* Dark slate background */
+    color: #E0E0E0; /* Light gray text */
+}
+
+/* Tabs styling */
+.css-18e3th9 {
+    background-color: #29293D; /* Slightly lighter dark gray for tabs */
+    color: #E0E0E0; /* Light gray text for inactive tabs */
+    border-radius: 5px; /* Rounded corners for tabs */
+    border: none; /* Remove border */
+    outline: none; /* Remove square highlighting */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Active tab styling */
+.css-1n543e5 {
+    background-color: #3A3A5F; /* Highlighted tab background */
+    color: #FFFFFF; /* White text for active tab */
+    font-weight: bold; /* Bold text for active tab */
+    border: none; /* Remove border */
+    outline: none; /* Remove square highlighting */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Input fields styling */
+input, select, textarea {
+    background-color: #29293D; /* Dark gray background for inputs */
+    color: #FFFFFF; /* White text for inputs */
+    border: 1px solid #5A5A7F; /* Subtle border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    outline: none; /* Remove square highlighting */
+    padding: 8px; /* Add padding for better spacing */
+    margin-bottom: 10px; /* Add margin for spacing between elements */
+}
+
+/* Remove highlight and borders around number input controls */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove default appearance */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove borders */
+    background: transparent; /* Make background transparent */
+}
+
+input[type="number"]:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Buttons styling */
+button {
+    background-color: #3A3A5F; /* Dark slate blue for buttons */
+    color: #FFFFFF; /* White text for buttons */
+    border: none; /* No border for buttons */   
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding for better button size */
+    font-weight: bold; /* Bold text for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove square highlighting */
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #4A4A7F; /* Slightly lighter blue on hover */
+}
+
+/* Headers styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF; /* White text for headers */
+    margin-bottom: 20px; /* Add spacing below headers */
+}
+
+/* Dataframe styling */
+.dataframe {
+    background-color: #29293D; /* Dark gray background for dataframes */
+    color: #FFFFFF; /* White text for dataframes */
+    border: 1px solid #5A5A7F; /* Subtle border for dataframes */
+    border-radius: 5px; /* Rounded corners for dataframes */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Scrollbars styling */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #1E1E2F; /* Dark background for scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #5A5A7F; /* Gray thumb for scrollbar */
+    border-radius: 5px; /* Rounded corners for scrollbar */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #29293D; /* Dark gray background for tables */
+    color: #FFFFFF; /* White text for tables */
+    border: 1px solid #5A5A7F; /* Subtle border for tables */
+    border-radius: 5px; /* Rounded corners for tables */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #5A5A7F; /* Subtle border for table rows */
+}
+
+th {
+    background-color: #3A3A5F; /* Slightly darker background for table headers */
+    color: #FFFFFF; /* White text for table headers */
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #4A4A7F; /* Slightly lighter background on hover */
+}
