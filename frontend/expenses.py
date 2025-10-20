@@ -9,10 +9,13 @@ def maintain_expenses(api_url):
     categories = ['Rent', 'Food', 'Shopping', 'Entertainment', 'Other']
 
     # Select a date
-    selected_date = st.date_input('Select a date', datetime(2024, 8, 1), label_visibility="collapsed")
+    col10, col11, col12 = st.columns(3)
+    
+    with col10:    
+        selected_date = st.date_input('Select a date', datetime(2024, 8, 1), label_visibility="collapsed")
 
-    # Convert the selected date to a string in the format 'YYYY-MM-DD'
-    formatted_date = selected_date.strftime('%Y-%m-%d')
+        # Convert the selected date to a string in the format 'YYYY-MM-DD'
+        formatted_date = selected_date.strftime('%Y-%m-%d')
 
     # Fetch expenses dynamically when the date changes
     if "existing_expenses" not in st.session_state or st.session_state.get("last_selected_date") != selected_date:
@@ -31,11 +34,11 @@ def maintain_expenses(api_url):
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            st.markdown("<p style='color: white; font-weight: heading;'>Amount</p>", unsafe_allow_html=True)
+            st.markdown("**Amount**")
         with col2:
-            st.markdown("<p style='color: white; font-weight: heading;'>Category</p>", unsafe_allow_html=True)
+            st.markdown("**Category**")
         with col3:
-             st.markdown("<p style='color: white; font-weight: heading;'>Notes</p>", unsafe_allow_html=True)
+             st.markdown("**Notes**")
 
         # Create a new list to hold updated expenses
         updated_expenses = []

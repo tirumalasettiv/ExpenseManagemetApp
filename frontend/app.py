@@ -1,14 +1,11 @@
 import os
 import streamlit as st
-import pandas as pd
-from datetime import datetime
-import requests 
 from expenses import maintain_expenses
 from analytics import view_analytics
 
-# Load and apply CSS styles
+# api_url = "https://expensetracking.streamlit.app"
 
-api_url = "https://expensetracking.streamlit.app"
+api_url = 'http://127.0.0.1:8000' 
 
 st.title("Expense Management App")
 
