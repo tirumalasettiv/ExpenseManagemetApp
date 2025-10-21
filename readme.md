@@ -34,8 +34,8 @@ The **Expense Management App** is a web-based application designed to help users
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/expense-management-app.git
-   cd expense-management-app
+   git clone https://github.com/tirumalasettiv/ExpenseManagemetApp.git
+   cd ExpenseManagemetApp
 2. Install dependencies:
 
     -  Set up the database:
@@ -101,10 +101,10 @@ POST /expenses/{expense_date}
 
 
 ## Screenshots
-Add/Update Expenses
-<img alt="Add Expenses" src="https://via.placeholder.com/800x400?text=Add+Expenses+Screenshot">
-View Analytics
-<img alt="View Analytics" src="https://via.placeholder.com/800x400?text=View+Analytics+Screenshot">
+![Maintain Expenses](assets/maintain_expenses.png)
+![Expenses by Category](assets/expneses_by_category.png)
+![Maintain by Month](assets/expenses_by_month.png)
+
 
 
 
@@ -123,8 +123,4 @@ View Analytics
 
 
 ### Notes:
-- Replace `https://github.com/your-repo/expense-management-app.git` with your actual repository URL.
-- Replace placeholder image links with actual screenshots of your app.
-- Update the `db_connect.py` details and any other project-specific information as needed.
-
-Let me know if you need further customization!
+- Remove DB credentials from `db_connect.py` 

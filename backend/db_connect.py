@@ -54,7 +54,7 @@ def delete_expenses_for_date(expense_date):
         cursor.execute(query, value)
         
         
-def get_analytics(from_date, to_date):
+def get_spend_by_category(from_date, to_date):
     with get_db_cursor() as cursor:
         query = ''' 
         SELECT 
@@ -65,12 +65,26 @@ def get_analytics(from_date, to_date):
         '''
         filter = (from_date, to_date)
         cursor.execute(query, filter)      
-        analytics = cursor.fetchall() 
-        return analytics
+        expenses_by_category = cursor.fetchall() 
+        return expenses_by_category
+
+def get_spend_by_month(from_date, to_date):
+    with get_db_cursor() as cursor:
+        query = ''' 
+        SELECT
+        MONTHNAME(expense_date) AS expense_month,
+        SUM(amount) as expense
+        FROM expenses
+        where expense_date BETWEEN %s and %s
+        GROUP BY expense_month; '''
+        filter = (from_date, to_date)
+        cursor.execute(query, filter)      
+        expenses_by_month = cursor.fetchall() 
+        return expenses_by_month
 
 if __name__ == "__main__":
     
-    data = get_analytics("2024-08-01", "2024-08-20")
+    data = get_spend_by_category("2024-08-01", "2024-08-20")
     #insert_expense("2024-08-20", 300, "Food", "Panipuri")
     #delete_expenses_for_date("2024-08-20")
     #fetch_expenses_for_date("2024-08-20")

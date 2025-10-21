@@ -34,12 +34,20 @@ def add_or_update_expense(expense_date:date, expenses:List[Expense]):
     
     return {"message":"Expenses added/updated successfully"}
 
-@app.get("/expense_sumamry/{start_date},{end_date}")
-def get_expense_summary(start_date:date, end_date:date):
-    result = db_connect.get_analytics(start_date, end_date)
+@app.get("/expense_category/{start_date},{end_date}")
+def get_expense_category(start_date:date, end_date:date):
+    result = db_connect.get_spend_by_category(start_date, end_date)
     df = pd.DataFrame(result)
     total = df['total_amount'].sum()
     df['expense %'] = round((df['total_amount'] / total) * 100,2)
     df.sort_values(by='total_amount', ascending=False, inplace=True)
+    return df.to_dict('records')
+
+
+@app.get("/expense_month/{start_date},{end_date}")
+def get_expense_month(start_date:date, end_date:date):
+    result = db_connect.get_spend_by_month(start_date, end_date)
+    df = pd.DataFrame(result)
+    df.sort_values(by='expense', ascending=False, inplace=True)
     return df.to_dict('records')
 
